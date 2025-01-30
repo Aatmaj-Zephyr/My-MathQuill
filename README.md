@@ -1,3 +1,5 @@
+# [🚀 Go to website](https://github.com/Aatmaj-Zephyr/My-MathQuill/deployments/github-pages)
+
 ## Typesetting website using MathQuill
 
 Made this because MathQuill.com was on HTTP and couldn't find any other alternative
