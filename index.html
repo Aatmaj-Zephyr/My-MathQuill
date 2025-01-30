@@ -33,7 +33,7 @@
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
                 gap: 10px;
-                max-width: 850px;
+                max-width: 900px;
                 margin: 30px auto;
                 padding: 10px;
                 background: white;
@@ -42,7 +42,7 @@
             }
 
             .button-container button {
-                padding: 15px;
+                padding: 10px;
                 font-size: min(16px, 3vw);
                 border: none;
 				white-space: normal;
@@ -81,60 +81,42 @@
         <button id="copyButton">Copy LaTeX</button>
 
        <div class="button-container">
-    <!-- Greek Letters -->
-    <button onclick="insertLatex('\\alpha')">α</button>
-    <button onclick="insertLatex('\\beta')">β</button>
-    <button onclick="insertLatex('\\gamma')">γ</button>
-    <button onclick="insertLatex('\\delta')">δ</button>
-    <button onclick="insertLatex('\\epsilon')">ε</button>
-    <button onclick="insertLatex('\\zeta')">ζ</button>
-    <button onclick="insertLatex('\\eta')">η</button>
-    <button onclick="insertLatex('\\theta')">θ</button>
-    <button onclick="insertLatex('\\iota')">ι</button>
-    <button onclick="insertLatex('\\kappa')">κ</button>
-    <button onclick="insertLatex('\\lambda')">λ</button>
-    <button onclick="insertLatex('\\mu')">μ</button>
-    <button onclick="insertLatex('\\nu')">ν</button>
-    <button onclick="insertLatex('\\xi')">ξ</button>
-    <button onclick="insertLatex('\\omicron')">ο</button>
-    <button onclick="insertLatex('\\pi')">π</button>
-    <button onclick="insertLatex('\\rho')">ρ</button>
-    <button onclick="insertLatex('\\sigma')">σ</button>
-    <button onclick="insertLatex('\\tau')">τ</button>
-    <button onclick="insertLatex('\\upsilon')">υ</button>
-    <button onclick="insertLatex('\\phi')">φ</button>
-    <button onclick="insertLatex('\\chi')">χ</button>
-    <button onclick="insertLatex('\\psi')">ψ</button>
-    <button onclick="insertLatex('\\omega')">ω</button>
     
     <!-- Mathematical Operators -->
     <button onclick="insertLatex('\\pm')">±</button>
-    <button onclick="insertLatex('\\mp')">∓</button>
     <button onclick="insertLatex('\\times')">×</button>
     <button onclick="insertLatex('\\div')">÷</button>
-    <button onclick="insertLatex('\\cdot')">⋅</button>
-    <button onclick="insertLatex('\\circ')">∘</button>
-    <button onclick="insertLatex('\\propto')">∝</button>
+    
     <button onclick="insertLatex('\\infty')">∞</button>
     <button onclick="insertLatex('\\sum')">∑</button>
     <button onclick="insertLatex('\\prod')">∏</button>
     <button onclick="insertLatex('\\int')">∫</button>
+    <button onclick="insertLatex('\\oint')">∮</button>
+    
+
+    <button onclick="insertLatex('\\frac{d}{dx}')"><sup>d</sup>&frasl;<sub>dx</sub></button>
+
+    <button onclick="insertLatex('\\frac{\\partial }{\\partial x}')"><sup>∂</sup>&frasl;<sub>∂x</sub></button>
+    <button onclick="insertLatex('\\frac{d^n}{dx^n}')"><sup>d<sup>n</sup></sup>&frasl;<sub>dx<sup>n</sup></sub></button>
+    <button onclick="insertLatex('\\frac{\\partial ^n}{\\partial x^n}')"><sup>∂<sup>n</sup></sup>&frasl;<sub>∂x<sup>n</sup></sub></button>
+
     <button onclick="insertLatex('\\sqrt{}')">√</button>
+    <button onclick="insertLatex('\\sqrt[n]{x}')"><sup>n</sup>√</button>
     <button onclick="insertLatex('\\frac{}{}')">½</button>
-    <button onclick="insertLatex('\\log')">log</button>
-    <button onclick="insertLatex('\\ln')">ln</button>
-    <button onclick="insertLatex('\\sin')">sin</button>
-    <button onclick="insertLatex('\\cos')">cos</button>
-    <button onclick="insertLatex('\\tan')">tan</button>
-	<button  onclick="insertLatex('\\cosec')">csc</button>
-	<button onclick="insertLatex('\\sec')">sec</button>
-    <button onclick="insertLatex('\\cot')">cot</button>
-	<button  onclick="insertLatex('\\arcsin')">asin</button>
-    <button  onclick="insertLatex('\\arccos')">acos</button>
-    <button  onclick="insertLatex('\\arctan')">atan</button>
-	<button  onclick="insertLatex('\\arccosec')">acsc</button>
-	<button  onclick="insertLatex('\\arcsec')">asec</button>
-    <button  onclick="insertLatex('\\arccot')">acot</button>
+    <button onclick="insertLatex('\\log\\left(\\right)')">log</button>
+    <button onclick="insertLatex('\\ln\\left(\\right)')">ln</button>
+    <button onclick="insertLatex('\\sin\\left(\\right)')">sin</button>
+    <button onclick="insertLatex('\\cos\\left(\\right)')">cos</button>
+    <button onclick="insertLatex('\\tan\\left(\\right)')">tan</button>
+	<button  onclick="insertLatex('\\cosec\\left(\\right)')">csc</button>
+	<button onclick="insertLatex('\\sec\\left(\\right)')">sec</button>
+    <button onclick="insertLatex('\\cot\\left(\\right)')">cot</button>
+	<button  onclick="insertLatex('\\arcsin\\left(\\right)')">asin</button>
+    <button  onclick="insertLatex('\\arccos\\left(\\right)')">acos</button>
+    <button  onclick="insertLatex('\\arctan\\left(\\right)')">atan</button>
+	<button  onclick="insertLatex('\\arccosec\\left(\\right)')">acsc</button>
+	<button  onclick="insertLatex('\\arcsec\\left(\\right)')">asec</button>
+    <button  onclick="insertLatex('\\arccot\\left(\\right)')">acot</button>
     
     <!-- Relations & Logic -->
     <button onclick="insertLatex('\\leq')">≤</button>
@@ -180,6 +162,36 @@
     <button onclick="insertLatex('\\therefore')">∴</button>
     <button onclick="insertLatex('\\because')">∵</button>
     <button onclick="insertLatex('\\bot')">⊥</button>
+    <button onclick="insertLatex('\\cdot')">⋅</button>
+    <button onclick="insertLatex('\\circ')">∘</button>
+    <button onclick="insertLatex('\\propto')">∝</button>
+
+    <!-- Greek Letters -->
+    <button onclick="insertLatex('\\alpha')">α</button>
+    <button onclick="insertLatex('\\beta')">β</button>
+    <button onclick="insertLatex('\\gamma')">γ</button>
+    <button onclick="insertLatex('\\delta')">δ</button>
+    <button onclick="insertLatex('\\epsilon')">ε</button>
+    <button onclick="insertLatex('\\zeta')">ζ</button>
+    <button onclick="insertLatex('\\eta')">η</button>
+    <button onclick="insertLatex('\\theta')">θ</button>
+    <button onclick="insertLatex('\\iota')">ι</button>
+    <button onclick="insertLatex('\\kappa')">κ</button>
+    <button onclick="insertLatex('\\lambda')">λ</button>
+    <button onclick="insertLatex('\\mu')">μ</button>
+    <button onclick="insertLatex('\\nu')"><i>ν</i></button>
+    <button onclick="insertLatex('\\xi')">ξ</button>
+    <button onclick="insertLatex('\\omicron')">ο</button>
+    <button onclick="insertLatex('\\pi')">π</button>
+    <button onclick="insertLatex('\\rho')">ρ</button>
+    <button onclick="insertLatex('\\sigma')">σ</button>
+    <button onclick="insertLatex('\\tau')">τ</button>
+    <button onclick="insertLatex('\\upsilon')"><i>υ</i></button>
+    <button onclick="insertLatex('\\phi')">φ</button>
+    <button onclick="insertLatex('\\chi')">χ</button>
+    <button onclick="insertLatex('\\psi')">ψ</button>
+    <button onclick="insertLatex('\\omega')">ω</button>
+    
 </div>
 <div style="margin-top: 20px;">
 	<p> <a href="https://github.com/mathquill/mathquill" target="_blank">
