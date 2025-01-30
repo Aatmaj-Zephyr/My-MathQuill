@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Run Mathquill</title>
+
+        <!-- MathQuill CSS, jQuery, and MathQuill JS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.css"/> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.js"></script>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                text-align: center;
+                background-color: #f4f4f4;
+            }
+            
+            #math-field {
+                display: inline-block;
+                padding: 10px;
+                min-width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background: white;
+                font-size: 18px;
+            }
+
+            .button-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+                gap: 10px;
+                max-width: 850px;
+                margin: 30px auto;
+                padding: 10px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .button-container button {
+                padding: 15px;
+                font-size: min(16px, 3vw);
+                border: none;
+				white-space: normal;
+				height: auto;
+                border-radius: 5px;
+                background: #007bff;
+                color: white;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            .button-container button:hover {
+                background: #0056b3;
+            }
+
+            #copyButton {
+                margin-top: 15px;
+                padding: 10px 20px;
+                font-size: 18px;
+                background: #28a745;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            #copyButton:hover {
+                background: #218838;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Type math here: <span id="math-field"></span></p>
+        <p>LaTeX of what you typed: <span id="latex"></span></p>
+        <button id="copyButton">Copy LaTeX</button>
+
+       <div class="button-container">
+    <!-- Greek Letters -->
+    <button onclick="insertLatex('\\alpha')">α</button>
+    <button onclick="insertLatex('\\beta')">β</button>
+    <button onclick="insertLatex('\\gamma')">γ</button>
+    <button onclick="insertLatex('\\delta')">δ</button>
+    <button onclick="insertLatex('\\epsilon')">ε</button>
+    <button onclick="insertLatex('\\zeta')">ζ</button>
+    <button onclick="insertLatex('\\eta')">η</button>
+    <button onclick="insertLatex('\\theta')">θ</button>
+    <button onclick="insertLatex('\\iota')">ι</button>
+    <button onclick="insertLatex('\\kappa')">κ</button>
+    <button onclick="insertLatex('\\lambda')">λ</button>
+    <button onclick="insertLatex('\\mu')">μ</button>
+    <button onclick="insertLatex('\\nu')">ν</button>
+    <button onclick="insertLatex('\\xi')">ξ</button>
+    <button onclick="insertLatex('\\omicron')">ο</button>
+    <button onclick="insertLatex('\\pi')">π</button>
+    <button onclick="insertLatex('\\rho')">ρ</button>
+    <button onclick="insertLatex('\\sigma')">σ</button>
+    <button onclick="insertLatex('\\tau')">τ</button>
+    <button onclick="insertLatex('\\upsilon')">υ</button>
+    <button onclick="insertLatex('\\phi')">φ</button>
+    <button onclick="insertLatex('\\chi')">χ</button>
+    <button onclick="insertLatex('\\psi')">ψ</button>
+    <button onclick="insertLatex('\\omega')">ω</button>
+    
+    <!-- Mathematical Operators -->
+    <button onclick="insertLatex('\\pm')">±</button>
+    <button onclick="insertLatex('\\mp')">∓</button>
+    <button onclick="insertLatex('\\times')">×</button>
+    <button onclick="insertLatex('\\div')">÷</button>
+    <button onclick="insertLatex('\\cdot')">⋅</button>
+    <button onclick="insertLatex('\\circ')">∘</button>
+    <button onclick="insertLatex('\\propto')">∝</button>
+    <button onclick="insertLatex('\\infty')">∞</button>
+    <button onclick="insertLatex('\\sum')">∑</button>
+    <button onclick="insertLatex('\\prod')">∏</button>
+    <button onclick="insertLatex('\\int')">∫</button>
+    <button onclick="insertLatex('\\sqrt{}')">√</button>
+    <button onclick="insertLatex('\\frac{}{}')">½</button>
+    <button onclick="insertLatex('\\log')">log</button>
+    <button onclick="insertLatex('\\ln')">ln</button>
+    <button onclick="insertLatex('\\sin')">sin</button>
+    <button onclick="insertLatex('\\cos')">cos</button>
+    <button onclick="insertLatex('\\tan')">tan</button>
+	<button  onclick="insertLatex('\\cosec')">csc</button>
+	<button onclick="insertLatex('\\sec')">sec</button>
+    <button onclick="insertLatex('\\cot')">cot</button>
+	<button  onclick="insertLatex('\\arcsin')">asin</button>
+    <button  onclick="insertLatex('\\arccos')">acos</button>
+    <button  onclick="insertLatex('\\arctan')">atan</button>
+	<button  onclick="insertLatex('\\arccosec')">acsc</button>
+	<button  onclick="insertLatex('\\arcsec')">asec</button>
+    <button  onclick="insertLatex('\\arccot')">acot</button>
+    
+    <!-- Relations & Logic -->
+    <button onclick="insertLatex('\\leq')">≤</button>
+    <button onclick="insertLatex('\\geq')">≥</button>
+    <button onclick="insertLatex('\\neq')">≠</button>
+    <button onclick="insertLatex('\\approx')">≈</button>
+    <button onclick="insertLatex('\\equiv')">≡</button>
+    <button onclick="insertLatex('\\forall')">∀</button>
+    <button onclick="insertLatex('\\exists')">∃</button>
+    <button onclick="insertLatex('\\nexists')">∄</button>
+    <button onclick="insertLatex('\\in')">∈</button>
+    <button onclick="insertLatex('\\notin')">∉</button>
+    <button onclick="insertLatex('\\subset')">⊂</button>
+    <button onclick="insertLatex('\\supset')">⊃</button>
+    <button onclick="insertLatex('\\subseteq')">⊆</button>
+    <button onclick="insertLatex('\\supseteq')">⊇</button>
+    <button onclick="insertLatex('\\cap')">∩</button>
+    <button onclick="insertLatex('\\cup')">∪</button>
+    
+    <!-- Arrows -->
+    <button onclick="insertLatex('\\rightarrow')">→</button>
+    <button onclick="insertLatex('\\leftarrow')">←</button>
+    <button onclick="insertLatex('\\uparrow')">↑</button>
+    <button onclick="insertLatex('\\downarrow')">↓</button>
+    <button onclick="insertLatex('\\leftrightarrow')">↔</button>
+    <button onclick="insertLatex('\\updownarrow')">↕</button>
+    <button onclick="insertLatex('\\Rightarrow')">⇒</button>
+    <button onclick="insertLatex('\\Leftarrow')">⇐</button>
+    <button onclick="insertLatex('\\Uparrow')">⇑</button>
+    <button onclick="insertLatex('\\Downarrow')">⇓</button>
+    <button onclick="insertLatex('\\Leftrightarrow')">⇔</button>
+    <button onclick="insertLatex('\\Updownarrow')">⇕</button>
+    
+    <!-- Miscellaneous -->
+    <button onclick="insertLatex('\\angle')">∠</button>
+    <button onclick="insertLatex('\\perp')">⊥</button>
+    <button onclick="insertLatex('\\nabla')">∇</button>
+    <button onclick="insertLatex('\\partial')">∂</button>
+    <button onclick="insertLatex('\\degree')">°</button>
+    <button onclick="insertLatex('\\ell')">ℓ</button>
+    <button onclick="insertLatex('\\hbar')">ℏ</button>
+    <button onclick="insertLatex('\\aleph')">ℵ</button>
+    <button onclick="insertLatex('\\therefore')">∴</button>
+    <button onclick="insertLatex('\\because')">∵</button>
+    <button onclick="insertLatex('\\bot')">⊥</button>
+</div>
+<div style="margin-top: 20px;">
+	<p> <a href="https://github.com/mathquill/mathquill" target="_blank">
+            Credits: MathQuill
+        </a>
+    <p>
+        📖 <a href="https://tug.ctan.org/info/undergradmath/undergradmath.pdf" target="_blank">
+            LaTeX Math Cheat Sheet
+        </a>
+    </p>
+    <p>
+        💻 <a href="https://github.com/Aatmaj-Zephyr" target="_blank">
+            Follow me on GitHub
+			<br>
+			<br>
+			            <img src="https://img.shields.io/badge/GitHub-Aatmaj--Zephyr-blue?style=for-the-badge&logo=github" alt="GitHub Badge">
+
+        </a>
+    </p>
+</div>
+
+
+        <script>
+            var mathFieldSpan = document.getElementById('math-field');
+            var latexSpan = document.getElementById('latex');
+            var copyButton = document.getElementById('copyButton');
+
+            var MQ = MathQuill.getInterface(2);
+            var mathField = MQ.MathField(mathFieldSpan, {
+                spaceBehavesLikeTab: true,
+                handlers: {
+                    edit: function() {
+                        latexSpan.textContent = mathField.latex();
+                    }
+                }
+            });
+
+            copyButton.addEventListener('click', function() {
+                var latex = latexSpan.textContent;
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(latex).then(function() {
+                        alert('LaTeX copied to clipboard!');
+                    }).catch(function(error) {
+                        alert('Error copying LaTeX: ' + error);
+                    });
+                } else {
+                    var textArea = document.createElement('textarea');
+                    textArea.value = latex;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    alert('LaTeX copied to clipboard!');
+                }
+            });
+
+            function insertLatex(symbol) {
+                mathField.write(symbol);
+                mathField.focus();
+				
+            }
+        </script>
+    </body>
+</html>
