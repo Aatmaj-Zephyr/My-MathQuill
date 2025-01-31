@@ -83,123 +83,137 @@
        <div class="button-container">
     
     <!-- Mathematical Operators -->
-    <button onclick="insertLatex('\\pm')">±</button>
-    <button onclick="insertLatex('\\times')">×</button>
-    <button onclick="insertLatex('\\div')">÷</button>
-    
-    <button onclick="insertLatex('\\infty')">∞</button>
-    <button onclick="insertLatex('\\sum')">∑</button>
-    <button onclick="insertLatex('\\prod')">∏</button>
-    <button onclick="insertLatex('\\int')">∫</button>
-    <button onclick="insertLatex('\\oint')">∮</button>
-    
+<button onclick="insertLatex('\\pm')" title="Plus-minus">&#177;</button>
+<button onclick="insertLatex('\\times')" title="Multiplication">&#215;</button>
+<button onclick="insertLatex('\\div')" title="Division">&#247;</button>
 
-    <button onclick="insertLatex('\\frac{d}{dx}')"><sup>d</sup>&frasl;<sub>dx</sub></button>
+<button onclick="insertLatex('\\infty')" title="Infinity">&#8734;</button>
+<button onclick="insertLatex('\\sum')" title="Summation">&#8721;</button>
+<button onclick="insertLatex('\\prod')" title="Product">&#8719;</button>
+<button onclick="insertLatex('\\int')" title="Integration">&#8747;</button>
+<button onclick="insertLatex('\\oint')" title="Contour Integral">&#8750;</button>
 
-    <button onclick="insertLatex('\\frac{\\partial }{\\partial x}')"><sup>∂</sup>&frasl;<sub>∂x</sub></button>
-    <button onclick="insertLatex('\\frac{d^n}{dx^n}')"><sup>d<sup>n</sup></sup>&frasl;<sub>dx<sup>n</sup></sub></button>
-    <button onclick="insertLatex('\\frac{\\partial ^n}{\\partial x^n}')"><sup>∂<sup>n</sup></sup>&frasl;<sub>∂x<sup>n</sup></sub></button>
+<button onclick="insertLatex('\\frac{d}{dx}')" title="Derivative"><sup>d</sup>&frasl;<sub>dx</sub></button>
 
-    <button onclick="insertLatex('\\sqrt{}')">√</button>
-    <button onclick="insertLatex('\\sqrt[n]{x}')"><sup>n</sup>√</button>
-    <button onclick="insertLatex('\\frac{}{}')">½</button>
-    <button onclick="insertLatex('\\log\\left(\\right)')">log</button>
-    <button onclick="insertLatex('\\ln\\left(\\right)')">ln</button>
-    <button onclick="insertLatex('\\sin\\left(\\right)')">sin</button>
-    <button onclick="insertLatex('\\cos\\left(\\right)')">cos</button>
-    <button onclick="insertLatex('\\tan\\left(\\right)')">tan</button>
-	<button  onclick="insertLatex('\\cosec\\left(\\right)')">csc</button>
-	<button onclick="insertLatex('\\sec\\left(\\right)')">sec</button>
-    <button onclick="insertLatex('\\cot\\left(\\right)')">cot</button>
-	<button  onclick="insertLatex('\\arcsin\\left(\\right)')">asin</button>
-    <button  onclick="insertLatex('\\arccos\\left(\\right)')">acos</button>
-    <button  onclick="insertLatex('\\arctan\\left(\\right)')">atan</button>
-	<button  onclick="insertLatex('\\arccosec\\left(\\right)')">acsc</button>
-	<button  onclick="insertLatex('\\arcsec\\left(\\right)')">asec</button>
-    <button  onclick="insertLatex('\\arccot\\left(\\right)')">acot</button>
-    
-    <!-- Relations & Logic -->
-    <button onclick="insertLatex('\\leq')">≤</button>
-    <button onclick="insertLatex('\\geq')">≥</button>
-    <button onclick="insertLatex('\\neq')">≠</button>
-    <button onclick="insertLatex('\\approx')">≈</button>
-    <button onclick="insertLatex('\\equiv')">≡</button>
-    <button onclick="insertLatex('\\forall')">∀</button>
-    <button onclick="insertLatex('\\exists')">∃</button>
-    <button onclick="insertLatex('\\nexists')">∄</button>
-    <button onclick="insertLatex('\\in')">∈</button>
-    <button onclick="insertLatex('\\notin')">∉</button>
-    <button onclick="insertLatex('\\subset')">⊂</button>
-    <button onclick="insertLatex('\\supset')">⊃</button>
-    <button onclick="insertLatex('\\subseteq')">⊆</button>
-    <button onclick="insertLatex('\\supseteq')">⊇</button>
-    <button onclick="insertLatex('\\cap')">∩</button>
-    <button onclick="insertLatex('\\cup')">∪</button>
-    
+<button onclick="insertLatex('\\frac{\\partial }{\\partial x}')" title="Partial Derivative"><sup>∂</sup>&frasl;<sub>∂x</sub></button>
+<button onclick="insertLatex('\\frac{d^n}{dx^n}')" title="nth Derivative"><sup>d<sup>n</sup></sup>&frasl;<sub>dx<sup>n</sup></sub></button>
+<button onclick="insertLatex('\\frac{\\partial ^n}{\\partial x^n}' )"title="Partial nth Derivative"><sup>∂<sup>n</sup></sup>&frasl;<sub>∂x<sup>n</sup></sub></button>
+
+<button onclick="insertLatex('\\sqrt{}')" title="Square Root">√</button>
+<button onclick="insertLatex('\\sqrt[n]{x}')" title="nth root" ><sup>n</sup>√</button>
+<button onclick="insertLatex('\\frac{}{}')" title="Fraction">½</button>
+<button onclick="insertLatex('\\log\\left(\\right)')" title="Logarithm">log</button>
+<button onclick="insertLatex('\\ln\\left(\\right)')"title="Natural Logarithm">ln</button>
+<button onclick="insertLatex('\\sin\\left(\\right)')" title="Sine">sin</button>
+<button onclick="insertLatex('\\cos\\left(\\right)')" title="Cosine">cos</button>
+<button onclick="insertLatex('\\tan\\left(\\right)')" title="Tangent">tan</button>
+<button onclick="insertLatex('\\cosec\\left(\\right)')" title="Cosecant">csc</button>
+<button onclick="insertLatex('\\sec\\left(\\right)')" title="Secant">sec</button>
+<button onclick="insertLatex('\\cot\\left(\\right)')" title="Cotangent">cot</button>
+<button  onclick="insertLatex('\\arcsin\\left(\\right)')" title="Arcsine">asin</button>
+<button  onclick="insertLatex('\\arccos\\left(\\right)')" title="Arccosine">acos</button>
+<button  onclick="insertLatex('\\arctan\\left(\\right)')" title="Arctangent">atan</button>
+<button  onclick="insertLatex('\\arccosec\\left(\\right)')" title="Arccosecant">acsc</button>
+<button  onclick="insertLatex('\\arcsec\\left(\\right)')" title="Arcsecant">asec</button>
+<button  onclick="insertLatex('\\arccot\\left(\\right)')" title="Arccotangent">acot</button>
+
+<!-- Relations & Logic -->
+<button onclick="insertLatex('\\leq')" title="Less than or equal to">&#8804;</button>
+<button onclick="insertLatex('\\geq')" title="Greater than or equal to">&#8805;</button>
+<button onclick="insertLatex('\\neq')" title="Not equal">&#8800;</button>
+<button onclick="insertLatex('\\approx')" title="Approxl">≈</button>
+<button onclick="insertLatex('\\equiv')" title="Equivalent">≡</button>
+<button onclick="insertLatex('\\forall')" title="For all">∀</button>
+<button onclick="insertLatex('\\land')" title="Logical AND">∧</button>
+<button onclick="insertLatex('\\lor')" title="Logical OR">∨</button>
+<button onclick="insertLatex('\\exists')" title="There exists">∃</button>
+<button onclick="insertLatex('\\nexists')" title="There does not exists">∄</button>
+<button onclick="insertLatex('\\in')" title="in">∈</button>
+<button onclick="insertLatex('\\notin')" title="Not in">∉</button>
+<button onclick="insertLatex('\\subset')" title="Subset Right">⊂</button>
+<button onclick="insertLatex('\\supset')" title="Subset Left" >⊃</button>
+<button onclick="insertLatex('\\subseteq')" title="Subset Equal">⊆</button>
+<button onclick="insertLatex('\\supseteq')" title="Subset Equal">⊇</button>
+<button onclick="insertLatex('\\cap')" title="Intersection">∩</button>
+<button onclick="insertLatex('\\cup')" title="Union">∪</button>
+<button onclick="insertLatex('\\neg')" title="Negation">¬</button>
+<button onclick="insertLatex('\\Re')" title="Set of Real Numbers">ℜ</button>
+<button onclick="insertLatex('\\Im')" title="Set of Imaginary Numbers"> ℑ</button>
+<button onclick="insertLatex('\\emptyset')" title="Empty set">∅</button>
+
     <!-- Arrows -->
-    <button onclick="insertLatex('\\rightarrow')">→</button>
-    <button onclick="insertLatex('\\leftarrow')">←</button>
-    <button onclick="insertLatex('\\uparrow')">↑</button>
-    <button onclick="insertLatex('\\downarrow')">↓</button>
-    <button onclick="insertLatex('\\leftrightarrow')">↔</button>
-    <button onclick="insertLatex('\\updownarrow')">↕</button>
-    <button onclick="insertLatex('\\Rightarrow')">⇒</button>
-    <button onclick="insertLatex('\\Leftarrow')">⇐</button>
-    <button onclick="insertLatex('\\Uparrow')">⇑</button>
-    <button onclick="insertLatex('\\Downarrow')">⇓</button>
-    <button onclick="insertLatex('\\Leftrightarrow')">⇔</button>
-    <button onclick="insertLatex('\\Updownarrow')">⇕</button>
+<button onclick="insertLatex('\\rightarrow')" title="Right Arrow">&#8594;</button>
+<button onclick="insertLatex('\\leftarrow')" title="Left Arrow">&#8592;</button>
+<button onclick="insertLatex('\\uparrow')" title="Up Arrow">&#8593;</button>
+<button onclick="insertLatex('\\downarrow')" title="Down Arrow">&#8595;</button>
+<button onclick="insertLatex('\\leftrightarrow')" title="Left Right Arrow">↔</button>
+<button onclick="insertLatex('\\updownarrow')" title="Up Down Arrow">↕</button>
+<button onclick="insertLatex('\\Rightarrow')" title="Implies">⇒</button>
+<button onclick="insertLatex('\\Leftarrow')" title=" Left  Double Arrow">⇐</button>
+<button onclick="insertLatex('\\Uparrow')" title="Up Double Arrow">⇑</button>
+<button onclick="insertLatex('\\Downarrow')" title="Down Double Arrow">⇓</button>
+<button onclick="insertLatex('\\Leftrightarrow')" title="Left Right Double Arrow">⇔</button>
+<button onclick="insertLatex('\\Updownarrow')" title="Up Down Double Arrow">⇕</button>
     
     <!-- Miscellaneous -->
-    <button onclick="insertLatex('\\angle')">∠</button>
-    <button onclick="insertLatex('\\perp')">⊥</button>
-    <button onclick="insertLatex('\\nabla')">∇</button>
-    <button onclick="insertLatex('\\partial')">∂</button>
-    <button onclick="insertLatex('\\degree')">°</button>
-    <button onclick="insertLatex('\\ell')">ℓ</button>
-    <button onclick="insertLatex('\\hbar')">ℏ</button>
-    <button onclick="insertLatex('\\aleph')">ℵ</button>
-    <button onclick="insertLatex('\\therefore')">∴</button>
-    <button onclick="insertLatex('\\because')">∵</button>
-    <button onclick="insertLatex('\\bot')">⊥</button>
-    <button onclick="insertLatex('\\cdot')">⋅</button>
-    <button onclick="insertLatex('\\circ')">∘</button>
-    <button onclick="insertLatex('\\propto')">∝</button>
+<button onclick="insertLatex('\\angle')" title="Angle symbol">∠</button>
+<button onclick="insertLatex('\\perp')" title="Perpendicular symbol">⊥</button>
+<button onclick="insertLatex('\\nabla')" title="Nabla symbol (del operator)">∇</button>
+<button onclick="insertLatex('\\partial')" title="Partial derivative symbol">∂</button>
+<button onclick="insertLatex('\\degree')" title="Degree ">°</button>
+<button onclick="insertLatex('\\ell')" title="Script lowercase l">ℓ</button>
+<button onclick="insertLatex('\\hbar')" title="Reduced Planck's constant">ℏ</button>
+<button onclick="insertLatex('\\aleph')" title="Aleph ">ℵ</button>
+<button onclick="insertLatex('\\therefore')" title="Therefore ">∴</button>
+<button onclick="insertLatex('\\because')" title="Because ">∵</button>
+<button onclick="insertLatex('\\bot')" title="Perpendicular">⊥</button>
+<button onclick="insertLatex('\\cdot')" title="Dot ">⋅</button>
+<button onclick="insertLatex('\\cdots')" title="Three Dots ">⋅⋅⋅</button>
+<button onclick="insertLatex('\\parallel')" title="Parallel">∥</button>
+<button onclick="insertLatex('\\circ')" title="Circle ">∘</button>
+<button onclick="insertLatex('\\propto')" title="Proportional to ">∝</button>
+
 
     <!-- Greek Letters -->
-    <button onclick="insertLatex('\\alpha')">α</button>
-    <button onclick="insertLatex('\\beta')">β</button>
-    <button onclick="insertLatex('\\gamma')">γ</button>
-    <button onclick="insertLatex('\\delta')">δ</button>
-    <button onclick="insertLatex('\\epsilon')">ε</button>
-    <button onclick="insertLatex('\\zeta')">ζ</button>
-    <button onclick="insertLatex('\\eta')">η</button>
-    <button onclick="insertLatex('\\theta')">θ</button>
-    <button onclick="insertLatex('\\iota')">ι</button>
-    <button onclick="insertLatex('\\kappa')">κ</button>
-    <button onclick="insertLatex('\\lambda')">λ</button>
-    <button onclick="insertLatex('\\mu')">μ</button>
-    <button onclick="insertLatex('\\nu')"><i>ν</i></button>
-    <button onclick="insertLatex('\\xi')">ξ</button>
-    <button onclick="insertLatex('\\omicron')">ο</button>
-    <button onclick="insertLatex('\\pi')">π</button>
-    <button onclick="insertLatex('\\rho')">ρ</button>
-    <button onclick="insertLatex('\\sigma')">σ</button>
-    <button onclick="insertLatex('\\tau')">τ</button>
-    <button onclick="insertLatex('\\upsilon')"><i>υ</i></button>
-    <button onclick="insertLatex('\\phi')">φ</button>
-    <button onclick="insertLatex('\\chi')">χ</button>
-    <button onclick="insertLatex('\\psi')">ψ</button>
-    <button onclick="insertLatex('\\omega')">ω</button>
+<button onclick="insertLatex('\\alpha')" title="Alpha">α</button>
+<button onclick="insertLatex('\\beta')" title="Beta">β</button>
+<button onclick="insertLatex('\\gamma')" title="Gamma">γ</button>
+<button onclick="insertLatex('\\delta')" title="Delta">δ</button>
+<button onclick="insertLatex('\\epsilon')" title="Epsilon">ε</button>
+<button onclick="insertLatex('\\zeta')" title="Zeta">ζ</button>
+<button onclick="insertLatex('\\eta')" title="Eta">η</button>
+<button onclick="insertLatex('\\theta')" title="Theta">θ</button>
+<button onclick="insertLatex('\\iota')" title="Iota">ι</button>
+<button onclick="insertLatex('\\kappa')" title="Kappa">κ</button>
+<button onclick="insertLatex('\\lambda')" title="Lambda">λ</button>
+<button onclick="insertLatex('\\mu')" title="Mu">μ</button>
+<button onclick="insertLatex('\\nu')" title="Nu"><i>ν</i></button>
+<button onclick="insertLatex('\\xi')" title="Xi">ξ</button>
+<button onclick="insertLatex('\\omicron')" title="Omicron">ο</button>
+<button onclick="insertLatex('\\pi')" title="Pi">π</button>
+<button onclick="insertLatex('\\rho')" title="Rho">ρ</button>
+<button onclick="insertLatex('\\sigma')" title="Sigma">σ</button>
+<button onclick="insertLatex('\\tau')" title="Tau">τ</button>
+<button onclick="insertLatex('\\upsilon')" title="Upsilon"><i>υ</i></button>
+<button onclick="insertLatex('\\phi')" title="Phi">φ</button>
+<button onclick="insertLatex('\\chi')" title="Chi">χ</button>
+<button onclick="insertLatex('\\psi')" title="Psi">ψ</button>
+<button onclick="insertLatex('\\omega')" title="Omega">ω</button>
+<button onclick="insertLatex('\\space')" title="Blank Space"> </button>
     
 </div>
 <div style="margin-top: 20px;">
-	<p> <a href="https://github.com/mathquill/mathquill" target="_blank">
+	<p>🚀 <a href="https://github.com/mathquill/mathquill" target="_blank">
             Credits: MathQuill
         </a>
     <p>
         📖 <a href="https://tug.ctan.org/info/undergradmath/undergradmath.pdf" target="_blank">
             LaTeX Math Cheat Sheet
+        </a>
+    </p>
+    <p>
+        📋 <a href="https://mirror.niser.ac.in/ctan/info/symbols/comprehensive/symbols-a4.pdf">
+            Comprehensive LATEX Symbol Information
         </a>
     </p>
     <p>
